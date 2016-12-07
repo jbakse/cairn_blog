@@ -13,4 +13,4 @@ This is a test post.
 shader.rgb = 123;
 ```
 
-<video class="fill" src="/media/eater.mov" controls></video>
+<video class="fill" src="{{site.baseurl}}/media/eater.mov" controls></video>

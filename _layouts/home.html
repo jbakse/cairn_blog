@@ -18,8 +18,12 @@ layout: default
           <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </h2>
 
+        {% if post.poster_image %}
+            <img class="fill" src="{{site.baseurl}}{{post.poster_image}}"/>
+        {% endif %}
+
         {% if post.poster_video %}
-            <video class="fill" src="{{post.poster_video}}" controls></video>
+            <video class="fill" src="{{site.baseurl}}{{post.poster_video}}" controls></video>
         {% endif %}
       </li>
     {% endfor %}

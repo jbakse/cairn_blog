@@ -9,4 +9,4 @@ poster_video: /media/three_point_landing.mov
 
 This is a test post.
 
-<video class="fill" src="/media/three_point_landing.mov" controls></video>
+<video class="fill" src="{{site.baseurl}}/media/three_point_landing.mov" controls></video>
