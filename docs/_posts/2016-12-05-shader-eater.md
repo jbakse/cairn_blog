@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Shader Eater"
+title:  "Shader Eater Edited"
 date:   2016-12-05 23:12:54 -0500
 categories: shaders
 author: Justin Bakse
