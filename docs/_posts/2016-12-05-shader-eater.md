@@ -7,7 +7,7 @@ author: Justin Bakse
 poster_video: /media/eater.mov
 ---
 
-This is a test post.
+This is a test post. Testing Publishing.
 
 ```glsl
 shader.rgb = 123;
