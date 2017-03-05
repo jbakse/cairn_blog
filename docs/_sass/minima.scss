@@ -1,5 +1,5 @@
 // Define defaults for each variable.
-@import url( 'https://fonts.googleapis.com/css?family=Roboto:300|Slabo+27px');
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:300,500,700|Slabo+27px');
 
 $base-font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size: 24px;
@@ -42,4 +42,38 @@ $on-laptop: 800px !default;
 .fill {
     // border: 1px solid red;
     width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.three-up:after,
+.two-up:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.two-up img {
+    width: 50%;
+    float: left;
+}
+
+.three-up img {
+    width: 33.33%;
+    float: left;
+}
+
+.caption {
+    font-size: 0.6em;
+    margin: 10px 0;
+    font-weight: 300;
 }

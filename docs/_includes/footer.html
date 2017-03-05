@@ -44,3 +44,14 @@
   </div>
 
 </footer> -->
+
+
+<script src="//code.jquery.com/jquery-latest.js"></script>
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.7.1/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    $("img").each(function(e) {
+        console.log(this);
+        src = $(this).attr("src");
+        $(this).attr("data-featherlight", src);
+    });
+</script>
