@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Cairn Development Notes
-hero: /media/barrier_effect/full_effect.png
+hero: /media/site/headerimg_v1.jpg
 # email: your-email@domain.com
 # '>' this means to ignore newlines until "baseurl:"
 description: >
