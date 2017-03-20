@@ -4,6 +4,7 @@ title:  "Barrier Effect"
 date:   2017-03-04 12:00:00 -0500
 categories: shaders effects
 author: Justin Bakse
+poster_image: /media/barrier_effect/full_effect.png
 ---
 
 <video class="fill" src="{{site.baseurl}}/media/barrier_effect/full_effect.mp4" controls></video>
