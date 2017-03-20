@@ -1,34 +1,43 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-<div class="home">
+  {% include head.html %}
 
-  <!-- <h1 class="page-heading">Posts</h1> -->
+  <body>
 
-  {{ content }}
+    {% include header.html %}
+    
+    <div class="hero"><img src="{{site.baseurl}}{{site.hero}}"> </div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        {% if post.author %}<span class="post-meta">• {{ post.author }}</span>{% endif %}
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+          <ul class="post-list">
+            {% for post in site.posts %}
+              <li>
+                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                {% if post.author %}<span class="post-meta">• {{ post.author }}</span>{% endif %}
 
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
+                <h2>
+                  <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                </h2>
 
-        {% if post.poster_image %}
-            <img class="fill" src="{{site.baseurl}}{{post.poster_image}}"/>
-        {% endif %}
+                {% if post.poster_image %}
+                    <img class="fill" src="{{site.baseurl}}{{post.poster_image}}"/>
+                {% endif %}
 
-        {% if post.poster_video %}
-            <video class="fill" src="{{site.baseurl}}{{post.poster_video}}" controls></video>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
+                {% if post.poster_video %}
+                    <video class="fill" src="{{site.baseurl}}{{post.poster_video}}" controls></video>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
 
-  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
 
-</div>
+      </div>
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>
