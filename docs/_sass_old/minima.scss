@@ -1,7 +1,7 @@
 // Define defaults for each variable.
 @import url( 'https://fonts.googleapis.com/css?family=Roboto:300,500,700|Slabo+27px');
 
-$base-font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family: "Georgia", serif; //"Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size: 24px;
 $base-font-weight: 300;
 $small-font-size: $base-font-size * 0.875 !default;
@@ -19,7 +19,6 @@ $grey-color-dark: darken($grey-color, 25%) !default;
 
 // Width of the content area
 $content-width: 800px !default;
-
 $on-palm: 600px !default;
 $on-laptop: 800px !default;
 
@@ -41,7 +40,7 @@ $on-laptop: 800px !default;
 
 .fill {
     // border: 1px solid red;
-    width: 100%;
+    // width: 100%;
 }
 
 h1,
@@ -88,13 +87,30 @@ table td {
     border: 1px solid gray;
 }
 
-
 .site-header {
     background: black;
     color: white;
 }
 
-
 .hero {
     background-color: red;
+}
+
+main.page-content {
+    border: 1px solid red;
+}
+
+.post {
+    border: 1px solid green;
+}
+
+.post code,
+.post h1,
+.post h2,
+.post h3,
+.post p {
+    border: 1px solid blue;
+    max-width: $content-width;
+    margin: auto;
+    display: block;
 }

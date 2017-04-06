@@ -1,0 +1,140 @@
+---
+# Entry point for scss!
+---
+
+// @import "normalize.css";
+
+$page-color: white;
+$text-color: black;
+$content-width: 800px;
+$border-color1: #AAA;
+
+// Type
+@import "simple_typography/style.scss";
+@import "syntax.scss";
+
+p code {
+    color: black;
+    background-color: #f9f9f9;
+}
+
+.post pre code {
+    font-size: 16px;
+}
+
+p.post-meta {
+    color: #464675;
+    font-size: 16px;
+    margin-top: 30px;
+    // border: 1px solid red;
+    text-align: right;
+}
+
+p.post-meta time {
+    // font-style: italic;
+}
+
+p.alert {
+    border-left: 10px solid #f66;
+    // padding-left: 10px;
+    // position: relative;
+    // left: -10px;
+    background: #fee;
+    padding-left: 10px;
+    padding-right: 20px;
+    border-radius: 3px;
+}
+
+dt {
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+
+// PAGE
+
+body {
+    background-color: $page-color;
+    padding: 0;
+    margin: 0;
+}
+
+.site-header {
+    line-height: 60px;
+    background-color: $text-color;
+    color: white;
+    font-size: 20px;
+    a.site-title {
+        color: inherit;
+    }
+}
+
+article {
+    margin-bottom: 2em;
+}
+
+// BLOCKS
+.wrapper,
+.post h1,
+.post h2,
+.post h3,
+.post p,
+.post pre,
+.post ul,
+.post ol,
+.post dl
+{
+    // border: 1px solid blue;
+    max-width: $content-width;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+}
+
+hr {
+    max-width: $content-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post pre {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+// img, video {
+//     // max-width: 50%;
+//     margin-top: 30px;
+//     margin-bottom: 30px;
+//     margin-left: 50px;
+//     margin-right: 50px;
+//
+//     display: block;
+//     // border: 20px solid $border-color1;
+// }
+
+
+.figures
+{
+    // outline: 1px solid green;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+
+    position: relative;
+}
+
+.figures figure
+{
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+.figures img,
+.figures video,
+ {
+    display: block;
+    width: 100%;
+}
