@@ -7,7 +7,7 @@
 \*------------------------------------*/
 
 // Font Family
-@import url('https://fonts.googleapis.com/css?family=Lora|Abel');
+@import url('https://fonts.googleapis.com/css?family=Lora');
 $font-family: "Lora", serif;
 
 // Base Font for HTML
@@ -112,7 +112,7 @@ p {
 a {
     color: $link-color;
     text-decoration: none;
-    @include transition(all .2s ease);
+    // @include transition(all .2s ease);
 
     &:hover {
         color: darken($link-color, 10%);

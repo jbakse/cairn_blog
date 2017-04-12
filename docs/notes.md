@@ -7,3 +7,9 @@ rvm use 2.0.0
 # ruby --version
 
 `bundle exec jekyll serve --livereload`
+
+
+#TODO
+video player drop in
+<!-- fix lightbox -->
+<!-- fix links on homepage -->

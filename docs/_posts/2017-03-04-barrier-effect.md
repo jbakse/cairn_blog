@@ -4,6 +4,7 @@ title:  "Creating the Barrier Effect"
 date:   2017-03-04 12:00:00 -0500
 categories: shaders effects
 author: Justin Bakse
+author_image: /media/site/justin_bakse.jpg
 poster_image: /media/barrier_effect/full_effect.png
 ---
 
@@ -12,9 +13,9 @@ One of the most prominent effects in *Cairn* is the large magical barrier. The O
 
 <div class="figures">
 	<figure>
-		<video src="{{site.baseurl}}/media/barrier_effect/full_effect.mp4" controls></video>
+		<video class="afterglow" width="1920" height="1080" data-autoresize="fit" poster="{{site.baseurl}}/media/barrier_effect/full_effect.png" src="{{site.baseurl}}/media/barrier_effect/full_effect.mp4" controls></video>
 	</figure>
-	
+
 </div>
 
 ## Creating the Plasma Effect
