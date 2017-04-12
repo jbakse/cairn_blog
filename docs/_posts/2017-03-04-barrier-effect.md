@@ -12,8 +12,9 @@ One of the most prominent effects in *Cairn* is the large magical barrier. The O
 
 <div class="figures">
 	<figure>
-		<video class="fill" src="{{site.baseurl}}/media/barrier_effect/full_effect.mp4" controls></video>
+		<video src="{{site.baseurl}}/media/barrier_effect/full_effect.mp4" controls></video>
 	</figure>
+	
 </div>
 
 ## Creating the Plasma Effect

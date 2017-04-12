@@ -13,6 +13,11 @@ $border-color1: #AAA;
 @import "simple_typography/style.scss";
 @import "syntax.scss";
 
+h1, h2, h3, h4
+{
+    // font-family: "Lora", sans;
+    font-weight: bold;
+}
 p code {
     color: black;
     background-color: #f9f9f9;
@@ -129,11 +134,12 @@ hr {
 {
     padding: 10px;
     box-sizing: border-box;
+    flex-basis: 100%;
 }
 
 
 .figures img,
-.figures video,
+.figures video
  {
     display: block;
     width: 100%;
