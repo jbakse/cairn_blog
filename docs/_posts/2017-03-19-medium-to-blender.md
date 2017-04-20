@@ -148,8 +148,17 @@ Now that it's nicely lined up we can play around with the vertex shading. We cou
 [Shading:Smooth  -- Data Tab -- Auto Smoothing: on -- Clear Custom Split Normals Data -- Adjust Angle]
 {:.step}
 
+<div class="left-inline">
+	<div class="figures">
+		<figure>
+			<img src="{{site.baseurl}}/media/medium_workflow/blender_clearcustom.png">
+		</figure>
+	</div>
+</div>
+
 Adjust smoothing to taste.
 
+<div class="floatbreak"></div>
 <div class="figures">
 	<figure>
 		<img src="{{site.baseurl}}/media/medium_workflow/blender_003.jpg">
