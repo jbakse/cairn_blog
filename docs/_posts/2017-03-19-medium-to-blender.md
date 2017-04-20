@@ -35,13 +35,13 @@ In our first sketches for Cairn, we actually used Tiltbrush to rough out our puz
 	<figure>
 		<img src="{{site.baseurl}}/media/medium_workflow/medium_002.jpg">
 		<figcaption>
-		Sculpting
+		Sculpting the whole head with symmetry.
 		</figcaption>
 	</figure>
 	<figure>
 		<img src="{{site.baseurl}}/media/medium_workflow/medium_003.jpg">
 		<figcaption>
-		Cool
+		Manually shattering the head with the cut tool. 
 		</figcaption>
 	</figure>
 </div>
