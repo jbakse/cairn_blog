@@ -55,14 +55,15 @@ This is the fun part, sculpt some stuff. Here I'm sculpting the head of the owl-
 [clean up]
 Save your work and once it's saved, use the export tool. It will export a .obj into the Medium sculpts folder. Something like `Documents/Medium/sculpts/[user_name]/[save_name]`
 
-
-<div class="figures" style="float: left; width: 50%; margin-left: -50px;">
-	<figure>
-		<img  src="{{site.baseurl}}/media/medium_workflow/blender_normals.jpg">
-	</figure>
-	<figcaption>
-		Non Normal Normals
-	</figcaption>
+<div class="left-inline">
+	<div class="figures">
+		<figure>
+			<img  src="{{site.baseurl}}/media/medium_workflow/blender_normals.jpg">
+			<figcaption>
+				Non Normal Normals
+			</figcaption>
+		</figure>
+	</div>
 </div>
 
 If you bring the raw export into blender, it won't look quite right.
@@ -70,30 +71,8 @@ If you bring the raw export into blender, it won't look quite right.
 
 Medium is a terrible name to google for. When Medium came out it wasn't easy to find documentation, however you can now get the manual on the Medium homepage and the forums are quite active.
 
-
-
+<div class="floatbreak"></div>
 ## Cleaning up with Meshlab
-
-<div class="figures">
-	<figure>
-		<img src="{{site.baseurl}}/media/medium_workflow/meshlab_001.jpg">
-	</figure>
-</div>
-
-Now that we have our obj we need to clean it up a bit. For that we will use Meshlab. Blender has similar features, but Meshlab gives us a few different options when we decimate. Meshlab has many other tools that you might find useful for cleaning up you meshes.
-
-All that voxel modeling lead to some really complex geometry. Our first step will be to simplify it using the [blah blah] tool
-
-[menu + options]
-{:.step}
-
-<div class="figures" style="float: left; height:300px; margin-left: -50px;">
-	<figure>
-		<img style="height:100%; width:auto" src="{{site.baseurl}}/media/medium_workflow/meshlab_decimate.png">
-	</figure>
-</div>
-
-Our art style for Cairn is low-poly so we can crank up the simplification.  I reduced the number of vertices by 97%. That makes our model pretty chunky, but we'll be able to smooth that out later. Decimate however much you need.
 
 <div class="figures">
 	<figure>
@@ -110,9 +89,31 @@ Our art style for Cairn is low-poly so we can crank up the simplification.  I re
 	</figure>
 </div>
 
+Now that we have our obj we need to clean it up a bit. For that we will use Meshlab. Blender has similar features, but Meshlab gives us a few different options when we decimate. Meshlab has many other tools that you might find useful for cleaning up you meshes.
+
+All that voxel modeling lead to some really complex geometry. Our first step will be to simplify it using the [blah blah] tool
+
+[menu + options]
+{:.step}
+
+<div class="left-inline">
+	<div class="figures small">
+		<figure>
+			<img src="{{site.baseurl}}/media/medium_workflow/meshlab_decimate.png">
+		</figure>
+	</div>
+</div>
+
+[a few things about the steps]
+
+Our art style for Cairn is low-poly so we can crank up the simplification.  I reduced the number of vertices by 97%. That makes our model pretty chunky, but we'll be able to smooth that out later. Decimate however much you need.
+
+
+
 
 The other thing we need to do is fix the vertex normals. It's also an easy fix using the [blah blah] tool.
 
+<div class="floatbreak"></div>
 [menu]
 [Filters/Normals, Curvatures, and Orientation/Normalize Vertex Normals] Normalize Face Normals
 There's no confirmation or dialog and you won't notice any difference in Meshlab, but the normalization worked.
