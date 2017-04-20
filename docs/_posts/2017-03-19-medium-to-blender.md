@@ -28,6 +28,7 @@ Just a warning, using Medium on the Vive is not supported by Oculus, and there i
 In our first sketches for Cairn, we actually used Tiltbrush to rough out our puzzle and level layouts. Tiltbrush is stroke based, it feels like drawing in 3D. This makes it fast and good for sketching, but the exported geometry is really only a series of ribbons that make up each stroke. This worked well for a reference to model around, but was not useable as final geometry. Medium, on the other hand, feels like sculpting and allows you to work with solid 3D shapes and brushes. Medium exports geometry as solid 3D meshes, but they still need some work before being ready to use in Blender or as a game asset. Let's get into it, here's what we will be working with: Oculus Medium, Meshlab, and Blender.
 
 
+## Modeling in Medium
 <div class="figures">
 	<figure>
 		<img src="{{site.baseurl}}/media/medium_workflow/medium_002.jpg">
@@ -43,17 +44,11 @@ In our first sketches for Cairn, we actually used Tiltbrush to rough out our puz
 	</figure>
 </div>
 
-
-
-## Modeling in Medium
-
-
-This is the fun part, sculpt some stuff. Here I'm sculpting the head of the owl-god which is controlled by the VR player in Cairn. The owl-god is an ancient shattered statue that is held together magically. This is a pretty good example of some of the benefits of sculpting with Medium. I sculpt the whole head using symmetry. Then switch to the 'cut' tool and begin breaking up the head by hand. Blender does have tools for shattering geometry, but doing it by hand gives me much finer control and makes it easier for me to go and do some custom carving on the inside of the head. The cut tool also separates the cut pieces onto different layers which will come in handy later.
+This is the fun part, sculpt some stuff. Here I'm sculpting the head of the owl-god which is controlled by the VR player in Cairn. The owl-god is an ancient shattered statue that is held together magically. This is a pretty good example of some of the benefits of sculpting with Medium. I sculpt the half the head with mirroring turned on. Then use the 'cut' tool and begin breaking up the head by hand. Blender does have tools for shattering geometry, but doing it by hand gives me much finer control and makes it easier for me to go and do some custom carving on the inside of the head. The cut tool also separates the cut pieces onto different layers which can come in handy later.
 
 ## Exporting your Model
 
-[clean up]
-Save your work and once it's saved, use the export tool. It will export a .obj into the Medium sculpts folder. Something like `Documents/Medium/sculpts/[user_name]/[save_name]`
+When you export from Medium, it will save an `.obj` file next to your saved sculpt. You can find all of your sculpts here: `Documents/Medium/sculpts/[user_name]/[save_name]`
 
 <div class="left-inline">
 	<div class="figures">
@@ -66,10 +61,9 @@ Save your work and once it's saved, use the export tool. It will export a .obj i
 	</div>
 </div>
 
-If you bring the raw export into blender, it won't look quite right.
-[image of problem] This is because the normals on the mesh created by Medium are not normalized. We can use Meshlab to fix this.
+If you bring the raw export directly into Blender, you will notice there is something wrong with the normals. The mesh normals exported from Medium are not normalized. We can use Meshlab to fix this. It is actually a simple fix, but it took some trial and error to figure out.
 
-Medium is a terrible name to google for. When Medium came out it wasn't easy to find documentation, however you can now get the manual on the Medium homepage and the forums are quite active.
+This is because Medium is a terrible name to google for. Not only is there the blogging platform, but there is also the hit CBS television show and about 2 billion  other things according to Google. Things have improved since Medium came out, but I've found the best place to find good information has been on the [Medium forums](https://forums.oculus.com/community/categories/medium).
 
 <div class="floatbreak"></div>
 ## Cleaning up with Meshlab
@@ -78,22 +72,22 @@ Medium is a terrible name to google for. When Medium came out it wasn't easy to 
 	<figure>
 		<img src="{{site.baseurl}}/media/medium_workflow/meshlab_002.jpg">
 		<figcaption>
-		Before decimation 120000 verts
+		Before decimation 120000 faces
 		</figcaption>
 	</figure>
 	<figure>
 		<img src="{{site.baseurl}}/media/medium_workflow/meshlab_003.jpg">
 		<figcaption>
-		After decimation 5000 verts
+		After decimation 5000 faces
 		</figcaption>
 	</figure>
 </div>
 
-Now that we have our obj we need to clean it up a bit. For that we will use Meshlab. Blender has similar features, but Meshlab gives us a few different options when we decimate. Meshlab has many other tools that you might find useful for cleaning up you meshes.
+Now that we have our exported mesh we need to clean it up a bit. For that we will use Meshlab. Blender also has some decimate modifiers, but Meshlab gives us a few more options. Meshlab also has many other tools that are useful for cleaning up you meshes, like patching holes and repairing geometry.
 
-All that voxel modeling lead to some really complex geometry. Our first step will be to simplify it using the [blah blah] tool
+All that voxel modeling lead to some really complex geometry. Our first step will be to simplify it using decimation.
 
-[menu + options]
+Run `Quadric Edge Collapse Decimation` : Filters/Remeshing, Simplification and Reconstruction/Quadric Edge Collapse Decimation
 {:.step}
 
 <div class="left-inline">
@@ -104,22 +98,15 @@ All that voxel modeling lead to some really complex geometry. Our first step wil
 	</div>
 </div>
 
-[a few things about the steps]
-
-Our art style for Cairn is low-poly so we can crank up the simplification.  I reduced the number of vertices by 97%. That makes our model pretty chunky, but we'll be able to smooth that out later. Decimate however much you need.
-
-
-
-
-The other thing we need to do is fix the vertex normals. It's also an easy fix using the [blah blah] tool.
+There are a few different options when decimating. I typically stick to the dafaults and reduce the target number of faces. In the case of this mesh I can do some selections and run decimations on indiviual shattered pieces. This allows me to keep more detail in the face while greatly reducing the geometry for the smaller shards. Our art style for Cairn is low-poly so we can do some extreme decimation. I reduced the number of faces by 97%. That makes our model pretty chunky, but we'll smooth that out later in Blender. Decimate however much you need.
 
 <div class="floatbreak"></div>
-[menu]
-[Filters/Normals, Curvatures, and Orientation/Normalize Vertex Normals] Normalize Face Normals
-There's no confirmation or dialog and you won't notice any difference in Meshlab, but the normalization worked.
+The other thing we need to do is fix those normals. It's also an easy fix using the Normalize Vertex Normals filter.
+
+Run `Normalize Vertex Normals` : Filters/Normals, Curvatures, and Orientation/ Normalize Vertex Normals. There is no confirmation or dialog and you won't notice any difference in Meshlab, but the normalization worked.
 {:.step}
 
-Then we're good to go, export your mesh as an `.obj` and we can move on Blender.
+Then we're good to go, export your mesh as an `.obj` and move on to Blender.
 
 ## Finishing touches in Blender
 
@@ -138,14 +125,9 @@ Then we're good to go, export your mesh as an `.obj` and we can move on Blender.
 	</figure>
 </div>
 
-Import your `.obj` into Blender. I usually start by positioning centering my mesh and rotating into position.
-[our style mixes flat and smooth shading in a particular way "curved low-poly" by smoothly connecting some polygons]
-Now that it's nicely lined up we can play around with the vertex shading. We could just set it to flat shading, which looks pretty good for our ancient stone, but I still want a few smooth edges.
+Import your `.obj` into Blender. By default the mesh will probably have it's shading set to `Smooth`. In our case that is not what we want, but just switching to `Flat` shading isn't right either. We want a mix. Some of our style references for Cairn were paparcraft sculptures that had a mix of curves and hard corners. Most of the edges and tight corners should be sharp and other edges can be smoothed out. Luckily this is exactly what the Auto Smooth setting does.
 
-[Medium does something, we need to clear that to blah blah.] We can get this with auto smoothing, but first we need to clear some of the meshes smoothing data.
-
-[steps]
-[Shading:Smooth  -- Data Tab -- Auto Smoothing: on -- Clear Custom Split Normals Data -- Adjust Angle]
+To enable `Auto Smooth` we first need to `Clear Custom Split Normals Data`. Select your mesh and both can be found in the `Data` tab. Once the custom data is the cleared the `Angle` field under Auto Smooth will become editable. Be sure that the meshes shading is also set to `Smooth` in the Tools tray.
 {:.step}
 
 <div class="left-inline">
@@ -156,23 +138,24 @@ Now that it's nicely lined up we can play around with the vertex shading. We cou
 	</div>
 </div>
 
-Adjust smoothing to taste.
+Something worth noting: clearing the custom split normal data will also actually fix our problem with normalizing the normals. So if you forget to do it in Meshlab you can still fix that here.
+
+Adjust the smoothing angle to taste. This is the process we're using for most of the organic elements of Cairn like the rock platforms and trees. Auto Smooth is a quick way to get us close to the style that we're looking for, but it's not perfect and some of our assets will need a more manual approach. For instance the remaining architectural elements will likely be box modeled directly in Blender.
 
 <div class="floatbreak"></div>
 <div class="figures">
 	<figure>
 		<img src="{{site.baseurl}}/media/medium_workflow/blender_003.jpg">
 		<figcaption>
-		Auto Smoothing
+		Finding the right balance
 		</figcaption>
 	</figure>
 	<figure>
 		<img src="{{site.baseurl}}/media/medium_workflow/blender_004.jpg">
 		<figcaption>
-		Auto Smooothing
+		Smoothing the back
 		</figcaption>
 	</figure>
 </div>
 
-
-End tease Substance
+For my next post I will show off some of the next steps of our asset process: texturing in Substance Painter.
