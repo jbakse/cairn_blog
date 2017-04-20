@@ -1,15 +1,7 @@
 ---
 layout: post
-title:  "Directly Posted"
+title:  "Introducing Cairn"
 date:   2016-12-09 13:12:54 -0500
-categories: shaders
+categories: cairn
 author: Justin Bakse
 ---
-
-This is just some thing! 
-
-Edit! again
-
-and again and again
-
-last one
