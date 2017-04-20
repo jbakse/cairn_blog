@@ -17,7 +17,7 @@ $border-color1: #AAA;
 
 
 @media (max-width: 900px)  {
-    .post p.alert
+    .post p.alert, .post p.step 
     {
         border-radius: 0px !important;
     }
@@ -81,6 +81,14 @@ div.post-meta-line {
     // position: relative;
     // left: -10px;
     background: #fee;
+    padding-left: 40px;
+    padding-right: 50px;
+    border-radius: 3px;
+}
+
+.post p.step {
+    border-left: 10px solid #f7e86c;
+    background: #f7f5b6;
     padding-left: 40px;
     padding-right: 50px;
     border-radius: 3px;
