@@ -39,7 +39,7 @@ In our first sketches for Cairn, we actually used Tiltbrush to rough out our puz
 	<figure>
 		<img src="{{site.baseurl}}/media/medium_workflow/medium_003.jpg">
 		<figcaption>
-		Manually shattering the head with the cut tool. 
+		Manually shattering the head with the cut tool.
 		</figcaption>
 	</figure>
 </div>
@@ -87,7 +87,10 @@ Now that we have our exported mesh we need to clean it up a bit. For that we wil
 
 All that voxel modeling lead to some really complex geometry. Our first step will be to simplify it using decimation.
 
-Run `Quadric Edge Collapse Decimation` : Filters/Remeshing, Simplification and Reconstruction/Quadric Edge Collapse Decimation
+
+**MeshLab: Decimating Your Model**  
+The Quadric Edge Collapse Decimation Tool in Meshlab is a powerful tool for reducing the polycount of your models.  
+`Main Menu` » `Filters` » `Simplification and Reconstruction` » `Quadric Edge Collapse Decimation`
 {:.step}
 
 <div class="left-inline">
@@ -103,8 +106,13 @@ There are a few different options when decimating. I typically stick to the dafa
 <div class="floatbreak"></div>
 The other thing we need to do is fix those normals. It's also an easy fix using the Normalize Vertex Normals filter.
 
-Run `Normalize Vertex Normals` : Filters/Normals, Curvatures, and Orientation/ Normalize Vertex Normals. There is no confirmation or dialog and you won't notice any difference in Meshlab, but the normalization worked.
+**Meshlab: Fixing Your Normals**  
+Meshlab's Normalize Vertex Normals does exactly what it says. There is no confirmation or dialog and you won’t notice any difference in Meshlab, but the normalization works and cleans things up for Blender.  
+`Main Menu` » `Filters` » `Normals, Curvatures, and Orientation` » `Normalize Vertex Normals`
 {:.step}
+
+<!-- Run `Normalize Vertex Normals` : Filters/Normals, Curvatures, and Orientation/ Normalize Vertex Normals. There is no confirmation or dialog and you won't notice any difference in Meshlab, but the normalization worked.
+{:.step} -->
 
 Then we're good to go, export your mesh as an `.obj` and move on to Blender.
 
