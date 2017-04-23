@@ -101,7 +101,7 @@ The Quadric Edge Collapse Decimation Tool in Meshlab is a powerful tool for redu
 	</div>
 </div>
 
-There are a few different options when decimating. I typically stick to the dafaults and reduce the target number of faces. In the case of this mesh I can do some selections and run decimations on indiviual shattered pieces. This allows me to keep more detail in the face while greatly reducing the geometry for the smaller shards. Our art style for Cairn is low-poly so we can do some extreme decimation. I reduced the number of faces by 97%. That makes our model pretty chunky, but we'll smooth that out later in Blender. Decimate however much you need.
+There are a few different options when decimating. I typically stick to the defaults and reduce the target number of faces. In the case of this mesh I can do some selections and run decimations on indiviual shattered pieces. This allows me to keep more detail in the face while greatly reducing the geometry for the smaller shards. Our art style for Cairn is low-poly so we can do some extreme decimation. I reduced the number of faces by 97%. That makes our model pretty chunky, but we'll smooth that out later in Blender. Decimate however much you need.
 
 <div class="floatbreak"></div>
 The other thing we need to do is fix those normals. It's also an easy fix using the Normalize Vertex Normals filter.
