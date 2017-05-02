@@ -10,11 +10,23 @@ $content-width: 800px;
 $max-figure-width: 1600px;
 $border-color1: #AAA;
 
+
+
 // Type
 @import "simple_typography/style.scss";
 @import "syntax.scss";
 
+$primary-color: #63d5ef;
+$secondary-color: #a6e22c;
+$accent-color: #ef2672;
+$dark-color: #272822;
 
+/*.post h1{
+    color:$primary-color;
+}
+div.post-meta-line{
+    color:$primary-color;
+}*/
 
 @media (max-width: 900px)  {
     .post p.alert, .post p.step 
@@ -56,7 +68,7 @@ figcaption {
 
 
 div.post-meta-line {
-    color: $paragraph-color;
+    /*color: $paragraph-color;*/
 
     .name {
         font-weight: bold;
@@ -113,13 +125,34 @@ body {
 .site-header {
     font-family: "Raleway";
     line-height: 60px;
-    background-color: $text-color;
+    background-color: $header-color;
     color: white;
     font-size: 20px;
     text-align: center;
 
-    a.site-title {
+    .wrapper{
+        position: relative;
+    }
+    
+    /*a.site-title {
         color: inherit;
+    }*/
+    #header-logo{
+        display: block;
+        /*width: 150px;*/
+        padding: 10px 0px;
+        img{
+            margin: 0 auto;
+            width: 150px;
+        }
+    }
+    #about-link{
+        display: block;
+        position: absolute;
+        right: 50px;
+        top:0px;
+        color: white;
+        display: none;
     }
 }
 
@@ -138,7 +171,7 @@ article {
 .post ol,
 .post dl
 {
-    // border: 1px solid blue;
+    //border: 1px solid blue;
     max-width: $content-width;
     padding-left: 50px;
     padding-right: 50px;
